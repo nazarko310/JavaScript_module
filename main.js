@@ -1,191 +1,87 @@
-// // - Створити змінні. Присвоїти кожному з них значення: 'hello','owu','com', 'ua', 1, 10, -999, 123, 3.14, 2.7, 16, true, false.
-// //     Вивести кожну змінну за допомогою: console.log , alert, document.write
+// // 1. Створити масив з 10 чисел (можна використовувати Math.random Та Math.floor). Скласти результат цих чисел в змінній result.
+// let array = [];
+// for (const i = 0; i < 11; i++) {
+//     let number = Math.floor(Math.random() * 11);
+//     array.push(number)
 //
-// let hello = 'hello';
-// let owu = 'owu';
-// let com = 'com';
-// let ua = 'ua';
-// let number = 1;
-// let number1 = 10;
-// let number2 = -999;
-// let number3 = 123;
-// let number4 = 3.14;
-// let number5 = 2.7;
-// let number6 = 16;
-// let trues = true;
-// let falses = false;
+// }
+// console.log(array)
+// let sum = 0
+// for (const j = 0; j < array.length; j++) {
+//     sum += array[j]
 //
-// console.log(hello);
-// console.log(owu);
-// console.log(com);
-// console.log(ua);
-// console.log(number);
-// console.log(number1);
-// console.log(number2);
-// console.log(number3);
-// console.log(number4);
-// console.log(number5);
-// console.log(number6);
-// console.log(trues);
-// console.log(falses);
-//
-//
-// alert(hello);
-// alert(owu);
-// alert(com);
-// alert(ua);
-// alert(number);
-// alert(number1);
-// alert(number2);
-// alert(number3);
-// alert(number4);
-// alert(number5);
-// alert(number6);
-// alert(trues);
-// alert(falses);
-//
-// document.writeln(hello);
-// document.writeln(owu);
-// document.writeln(com);
-// document.writeln(ua);
-// document.writeln(number);
-// document.writeln(number1);
-// document.writeln(number2);
-// document.writeln(number3);
-// document.writeln(number4);
-// document.writeln(number5);
-// document.writeln(number6);
-// document.writeln(trues);
-// document.writeln(falses);
+// }
+// console.log(sum)
 
-// // - Переприсвоїти кожній змінній з завдання значення на довільне.
-// //     Вивести кожну змінну за допомогою: console.log , alert, document.write
-//
-// hello = 'hi';
-// owu = 'hhh';
-// com = 'kk';
-// ua = 3;
-// number = 6;
-// number1 = 75;
-// number2 = 7657;
-// number3 = -256;
-// number4 = 2.5854;
-// number5 = 49874;
-// number6 = 4894;
-// trues = false;
-// falses = true;
-//
-// console.log(hello);
-// console.log(owu);
-// console.log(com);
-// console.log(ua);
-// console.log(number);
-// console.log(number1);
-// console.log(number2);
-// console.log(number3);
-// console.log(number4);
-// console.log(number5);
-// console.log(number6);
-// console.log(trues);
-// console.log(falses);
-//
-//
-// alert(hello);
-// alert(owu);
-// alert(com);
-// alert(ua);
-// alert(number);
-// alert(number1);
-// alert(number2);
-// alert(number3);
-// alert(number4);
-// alert(number5);
-// alert(number6);
-// alert(trues);
-// alert(falses);
-//
-// document.writeln(hello);
-// document.writeln(owu);
-// document.writeln(com);
-// document.writeln(ua);
-// document.writeln(number);
-// document.writeln(number1);
-// document.writeln(number2);
-// document.writeln(number3);
-// document.writeln(number4);
-// document.writeln(number5);
-// document.writeln(number6);
-// document.writeln(trues);
-// document.writeln(falses);
+// // 2. Створити об'єкт book з наступними полями  - назва, кількість сторінок, жанр
+// const book = {
+//     name: 'Witcher',
+//     countOfPage: 80,
+//     genre: 'fantasy'
+// }
 
-// // - Створити 3 змінних firstName, middleName, lastName, наповнити їх своїм ПІБ. З'єднати їх в одну змінну person. (Не об'єкт)
 //
-// let firstName = 'Назарій';
-// let secondName = 'Покровець';
-// let middleName = 'Ігорович';
+// // 3. Створити об'єкт book з наступними полями  - назва, кількість сторінок, жанр, автори
 //
-// console.log(`${secondName} ${firstName} ${middleName}`);
+// const book = {
+//     name: 'Witcher',
+//     countOfPage:80,
+//     genre: 'fantasy',
+//     authors: 'Andjei Sapkowski'
+// }
 
-// // - За допомогою 3х різних prompt() отримати 3 слова які являються вашими Імям, По-Батькові та роками.
-// //     Вивести "Вітаю *Імя* *По батькові*. Тобі *вік* років".
+// // 4. Створити маис об'єктів book з наступними полями  - назва, кількість сторінок, жанр, автори. Вивести кожну книгу як окремий об'єкт
 //
+// let books = [
+//     {
+//         name: 'Witcher',
+//         countOfPage: 80,
+//         genre: 'fantasy',
+//         authors: 'Andjei Sapkowski'
+//     },
+//     {
+//         name: 'Witcher',
+//         countOfPage: 80,
+//         genre: 'fantasy',
+//         authors: 'Andjei Sapkowski'
+//     },
+//     {
+//         name: 'Witcher',
+//         countOfPage: 80,
+//         genre: 'fantasy',
+//         authors: 'Andjei Sapkowski'
+//     }
+// ]
 //
-// let firstName = prompt('Ваше ім`я');
-// let secondName = prompt('Ваше прізвище');
-// let age = prompt('Скільки вам років');
-//
-// console.log(`Вітаю ${firstName} ${secondName}. Тобі ${age} років.`);
+// for (const book of books) {
+//     console.log(book)
+// }
 
-// // - За допомогою оператора typeof визначити типи наступних змінних та вивести їх в консоль.
-// //     let a = 100; let b = '100'; let c = true;
 //
+// // 5. Напишіть код, який вираховує площу прямокутника висотою 23см. (змінна height) та шириною 10см (змінна width).
+// // Значення площі зберігати в змінній s.
 //
-// let a = 100;
-// let b = '100';
-// let c = true;
-//
-// console.log(typeof a)
-// console.log(typeof b)
-// console.log(typeof c)
+// let height = 23;
+// let width = 10;
+// let s = width * height;
+// console.log(`Площа прямокутна рівна ${s} см`)
 
+// // 6. Напиши код, який знаходить об'єм циліндра заввишки 10м (змінна heightC) та діаметром основи 4м (dC),
+// // результат помістіть у змінну v.
+//
+// let h = 10;
+// let d = 4;
+//
+// let v = 3.14 * Math.pow((d / 2), 2) * h;
+//
+// console.log(`Об'єм цилідра рівни ${Math.round(v)} м`);
 
-// // - Визначити відповідний оператор в виразах що б вийшов відповідний результат.
-// //     В однакових виразах не використовувати однакові оператори!!!
+// // 7. У прямокутного трикутника дві сторони n (зі значенням 3) та m (зі значенням 4).
+// // Знайдіть гіпотенузу k за теоремою Піфагора (потрібно використовувати функцію Math.pow (число, ступінь) або оператор зведення в ступінь **).
 //
-// //     5 ? 6 -> true
-// // 5 ? 6 -> false
-// // 5 ? 6 -> false
-// // 5 ? 6 -> false
-// // 10 ? 10 -> true
-// // 10 ? 10 -> true
-// // 10 ? 10 -> false
-// // 10 ? 10 -> false
-// // 10 ? 10 -> false
-// // 123 ? '123' -> false
-// // 123 ? '123' -> true
+// let n = 3;
+// let m = 4;
 //
-// console.log(5 < 6);
-// console.log(5 > 6);
-// console.log(5 === 6);
-// console.log(5 >= 6);
-// console.log(10 == 10);
-// console.log(10 === 10);
-// console.log(10 > 10);
-// console.log(10 > 10);
-// console.log(10 !== 10);
-// console.log(123 > 123);
-// console.log(123 === 123);
-
-
-// // - Подумайте Какие значения выведет в окно браузера следующий фрагмент кода?  и почему?
-// let str = "20";
-// let a = 5;
+// let c = Math.sqrt(Math.pow(n, 2) + Math.pow(m, 2));
 //
-//
-// document.write(str + a + "<br/>");//205
-//
-//
-// document.write(str - a + "<br/>"); //15
-// document.write(str * "2" + "<br/>");//40
-// document.write(str / 2 + "<br/>"); //10
-
+// console.log(`Гіпотенуза рівна ${c}`);
