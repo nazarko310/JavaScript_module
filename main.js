@@ -1,230 +1,158 @@
-// // 1. Створити пустий масив та :
-// //     a. заповнити його 50 парними числами за допомоги циклу.
-// //     b. заповнити його 50 непарними числами за допомоги циклу.
-// //     c. Заповнити масив 20ма рандомними числами. (Google: Generate random number JS)
-// // d. Заповнити масив 20ма рандомними чисалами в діапазоні від 8 до 732 (Google: Generate random number JS)
+// // - створити функцію яка обчислює та повертає площу прямокутника зі сторонами а і б
+// let a = +prompt('Введіть ширину');
+// let b = +prompt('Введіть ширину');
 //
+// function square(a, b) {
+//     console.log(a * b);
+//     return a * b;
+// }
 //
-// let array = [];
-//
-// // a. заповнити його 50 парними числами за допомоги циклу.
-// // for (let i = 0; i < 50; i++) {
-// //     array[0] = 2;
-// //     array[i+1] = array[i] + 2
-// //     console.log(array[i])
-// // }
-//
-// // // b. заповнити його 50 непарними числами за допомоги циклу.
-// //
-// // for (let i = 0; i < 50; i++) {
-// //     array[0] = 1;
-// //     array[i+1] = array[i] + 2
-// //     console.log(array[i])
-// // }
-//
-// // // Заповнити масив 20ма рандомними числами. (Google: Generate random number JS)
-// //
-// // for (let i = 0; i < 20; i++) {
-// //     let arrayElement = array[i];
-// //
-// //     arrayElement = Math.floor(Math.random() * 10)
-// //     console.log(arrayElement)
-// //
-// // }
-//
-// // // d. Заповнити масив 20ма рандомними чисалами в діапазоні від 8 до 732 (Google: Generate random number JS)
-// //
-// // for (let i = 0; i < 20; i++) {
-// //     let arrayElement = array[i];
-// //
-// //     arrayElement = Math.floor(Math.random() * (732 - 8))
-// //     console.log(arrayElement)
-// //
-// // }
+// square(a, b);
 
-// let array = []
+// // - створити функцію яка обчислює та повертає площу кола з радіусом r
+//
+// let r = +prompt('Введіть радіус');
+//
+// function squareCircle(r) {
+//     console.log(r * 3.14);
+//
+//     return r * 3.14;
+// }
+//
+// squareCircle(r);
 
-// // 2. Вивести за допомогою console.log кожен третій елемен
+// // - створити функцію яка обчислює та повертає площу циліндру висотою h, та радіутом r
+// let h = +prompt('Введіть висоту');
+// let r = +prompt('Введіть радіус');
 //
-// for (let i = 0; i < 20; i++) {
-//     let arrayElement = array[i];
+// function squareCylinder(h, r) {
+//     console.log(h * r);
+//     return h * r;
+// }
 //
-//     arrayElement = Math.floor(Math.random() * 10)
+// squareCylinder(h, r);
+
+// // - створити функцію яка приймає масив та виводить кожен його елемент
 //
-//     if (i % 3 === 0) {
+// let array = [1, 2, 3, 4, 5, 6];
+//
+// function arr(array) {
+//     for (let i = 0; i < array.length; i++) {
+//         const arrayElement = array[i];
 //         console.log(arrayElement);
 //     }
+// }
+//
+// arr(array);
+
+// // - створити функцію яка створює параграф з текстом. Текст задати через аргумент
+//
+// let paragraph = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci consequatur ea eius et ex fugiat inventore iste nam, reprehenderit, sequi suscipit, voluptates. Amet aperiam eligendi exercitationem molestias nemo quo reprehenderit.'
+//
+// function createParagraph(p) {
+//     document.write(`<p>${p}</p>`);
 //
 // }
+//
+// createParagraph(paragraph);
 
-// // 3. Вивести за допомогою console.log кожен третій елемен тільки якщо цей елемент є парним.
+// // - створити функцію яка створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий
 //
-// for (let i = 0; i < 20; i++) {
-//     let arrayElement = array[i];
+// let li = 'item';
 //
-//     arrayElement = Math.floor(Math.random() * 10)
+// function createItem(li) {
+//     document.write('<ul>');
 //
-//     if ((i % 3 === 0) && (arrayElement % 2 === 0)) {
-//         console.log(arrayElement);
+//     for (let i = 0; i < 3; i++) {
+//         document.write(`<li>${li}</li>`);
+//
 //     }
 //
+//     document.write('</ul>');
+//
 // }
+//
+// createItem(li);
 
-// // 4. Вивести за допомогою console.log кожен третій елемен тільки якщо цей елемент є парним та записати їх в новий масив
-// let newArray = [];
-// for (let i = 1; i < 21; i++) {
-//     let arrayElement = array[i];
+// // - створити функцію яка створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий. Кількість li визначається другим аргументом, який є числовим (тут використовувати цикл)
 //
-//     arrayElement = Math.floor(Math.random() * 10) + 1
+// let count = +prompt('Введіть к-сть елементів списку');
 //
-//     if ((i % 3 === 0) && (arrayElement % 2 === 0)) {
-//         newArray.push(arrayElement);
+// function createItem(text, count) {
+//     document.write('<ul>');
+//
+//     for (let i = 0; i < count; i++) {
+//         document.write(`<li>${text}</li>`);
+//
+//
 //     }
 //
+//     document.write('</ul>')
 // }
-// console.log(newArray)
+//
+// createItem('item', count);
 
-// // 5. Вивести кожен елемент масиву, сусід справа якого є парним
+// // - створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список
 //
-// let array = [1, 2, 3, 5, 7, 9, 56, 8, 67];
+// let array = [1, 'Maks', true, 3, 6, 34243, 'Nazar', false];
 //
-// for (let i = 0; i < array.length; i++) {
-//     // const arrayElement = array[i];
-//     if (array[i + 1] % 2 === 0) {
-//         console.log(array[i])
-//     }
-// }
-
-// // Є масив з числами [100,250,50,168,120,345,188], Які характеризують вартість окремої покупки. Обрахувати середній чек.
+// function createArrayItem(array) {
+//     document.write('<ul>');
 //
-// let array = [100, 250, 50, 168, 120, 345, 188];
-// let sum = 0;
-// for (let i = 0; i < array.length; i++) {
-//     sum += array[i];
+//     for (let i = 0; i < array.length; i++) {
+//         const arrayElement = array[i];
+//         document.write(`<li>${arrayElement}</li>`);
 //
-// }
-//     let average = sum / array.length;
-//     console.log(average)
-
-// // 7. Створити масив з рандомними значеннями, помножити всі його елементи на 5 та перемістити їх в інший масив.
-// let array = []
-// let arrayNew = []
-// for (let i = 0; i < 5; i++) {
-//     let arrayElement = array[i];
-//
-//     arrayElement = Math.floor(Math.random() * 10) + 1
-//
-//     arrayNew.push(arrayElement * 5);
-//
-// }
-//     console.log(arrayNew)
-
-// // 8. Створити масив з будь якими значеннями (стрінги, числа, і тд...). пройтись по ньому, і якщо елемент є числом - додати його в інший масив.
-//
-// let array = ['string', 2, 3, 'string', true, 'string', 484];
-// let arrayNew = [];
-//
-// for (let i = 0; i < array.length; i++) {
-//     const arrayElement = array[i];
-//
-//     if (typeof arrayElement === "number") {
-//         arrayNew.push(arrayElement);
 //     }
 //
-// }
-// console.log(arrayNew)
-
-// // - Дано 2 масиви з рівною кількістю об'єктів.
-// // Масиви:
-// // З'єднати в один об'єкт користувача та місто з відповідними "id" та "user_id" .
-// //     Записати цей об'єкт в новий масив
-//
-// let usersWithId = [
-//     {id: 1, name: 'vasya', age: 31, status: false },
-//     {id: 2, name: 'petya', age: 30, status: true},
-//     {id: 3, name: 'kolya', age: 29, status: true},
-//     {id: 4, name: 'olya', age: 28, status: false}
-// ];
-//
-// let citiesWithId = [
-//     {user_id: 3, country: 'USA', city: 'Portland'},
-//     {user_id: 1, country: 'Ukraine', city: 'Ternopil'},
-//     {user_id: 2, country: 'Poland', city: 'Krakow'},
-//     {user_id: 4, country: 'USA', city: 'Miami'}
-// ];
-//
-// let usersWithCities = [];
-//
-// for (let i = 0; i < usersWithId.length; i++) {
-//     const userWithId = usersWithId[i];
-//     usersWithCities.push(userWithId);
-//     for (let k = 0; k < usersWithCities.length; k++) {
-//         let userWithCity = usersWithCities[k];
-//         for (let j = 0; j < citiesWithId.length; j++) {
-//             let cityWithId = citiesWithId[j];
-//             if (userWithCity.id === cityWithId.user_id) {
-//                 userWithCity.address = cityWithId;
-//
-//             }
-//         }
-//     }
+//     document.write('</ul>');
 // }
 //
-// console.log(usersWithCities)
+// createArrayItem(array);
 
-// // - Взяти масив з 10 чисел або створити його. Вивести в консоль тільки ті елементи, значення яких є парними.
+// // - створити функцію яка приймає масив об'єктів з наступними полями id,name,age , та виводить їх в документ. Для кожного об'єкту окремий блок.
 //
-// let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
-// for (let i = 0; i < array.length; i++) {
-//     const arrayElement = array[i];
-//     if (arrayElement % 2 === 0) {
-//         console.log(arrayElement);
+//
+// let users = [
+//     {
+//         id: 1,
+//         name: 'Nazar',
+//         age: 21
+//
+//     },
+//     {
+//         id: 2,
+//         name: 'Maks',
+//         age: 35
+//
+//     },
+//     {
+//         id: 3,
+//         name: 'Dimas',
+//         age: 10
+//
+//     },
+//     {
+//         id: 4,
+//         name: 'Karina',
+//         age: 15
+//
+//     },
+// ]
+//
+//
+// function userCreator(obj) {
+//     document.write(`<div>`);
+//
+//     for (const objElement of obj) {
+//         document.write('<div>');
+//         document.write(`<h1>${objElement.name} №${objElement.id}</h1>`)
+//         document.write(`<p>${objElement.age}</p>`);
+//         document.write('</div>');
 //     }
 //
-// }
-
-// // - Взяти масив з 10 чисел або створити його. Створити 2й порожній масив. За допомогою будь-якого циклу скопіювати значення одного масиву в інший.
-//
-// let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
-//
-// let arrayNew = [];
-//
-// for (let i = 0; i < array.length; i++) {
-//     let arrayElement = array[i];
-//     arrayNew.push(arrayElement);
-// }
-// console.log(arrayNew);
-
-// // - Дано масив: [ 'a', 'b', 'c'] . За допомогою циклу for зібрати всі букви в слово.
-//
-// let array = ['a', 'b', 'c'];
-// let str = '';
-// for (let i = 0; i < array.length; i++) {
-//     const arrayElement = array[i];
-//     str += arrayElement;
-// }
-// console.log(str);
-
-// // - Дано масив: [ 'a', 'b', 'c'] . За допомогою циклу while зібрати всі букви в слово.
-//
-// let array = ['a', 'b', 'c'];
-//
-// let str = '';
-//
-// let i = 0;
-// while (i < array.length) {
-//     str += array[i];
-//     i++;
-// }
-// console.log(str);
-
-// // - Дано масив: [ 'a', 'b', 'c'] . За допомогою циклу for of зібрати всі букви в слово.
-//
-// let array = ['a', 'b', 'c'];
-// let str = '';
-//
-// for (const arrayElement of array) {
-//     str += arrayElement;
+//     document.write(`</div>`);
 //
 // }
-// console.log(str);
+//
+// userCreator(users);
