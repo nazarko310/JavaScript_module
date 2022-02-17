@@ -1,75 +1,147 @@
-// // - створити функцію, яка якщо приймає один аргумент, просто вивдоить його, якщо два аргументи - складає або конкатенує їх між собою.!!!!!!
+// // - створити функцію яка обчислює та повертає площу прямокутника
 //
-// function createSentence(stringOne, stringTwo, stringThree) {
-//     for (let i = 0; i < arguments.length; i++) {
-//         if (arguments.length === 1) {
-//             console.log(arguments);
-//         } else {
+// let a = prompt('Введіть першу сторону')
+// let b = prompt('Введіть другу сторону')
 //
-//         }
+// let square = (a, b) => a * b;
+//
+// console.log(square(a, b));
+
+// // - створити функцію яка обчислює та повертає площу кола
+//
+// let r = +prompt('Введіть радіус');
+//
+// let squareCircle = (r) => r * 3.14
+//
+// console.log(squareCircle(r));
+
+// // - створити функцію яка обчислює та повертає площу циліндру
+//
+// let h = +prompt('Введіть висоту');
+// let r = +prompt('Введіть радіус');
+//
+// let squareCylinder = (h, r) => 2 * 3.14 * h * r;
+//
+// console.log(squareCylinder(h, r));
+
+// // - створити функцію яка приймає масив та виводить кожен його елемент
+//
+// let array = [1, 2, 3, 4, 5, 6];
+//
+// let arr = (array) => {
+//     for (let i = 0; i < array.length; i++) {
+//         const arrayElement = array[i];
+//         console.log(arrayElement);
 //     }
 // }
 //
-// createSentence('One', 'Two', 'three');
+// arr(array);
 
-// // створити функцію  яка приймає два масиви та скаладає значення елементів з однаковими індексами  та повертає новий результуючий масив.
+// // - створити функцію яка створює параграф з текстом. Текст задати через аргумент
 //
+// let paragraph = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci consequatur ea eius et ex fugiat inventore iste nam, reprehenderit, sequi suscipit, voluptates. Amet aperiam eligendi exercitationem molestias nemo quo reprehenderit.'
 //
-// let arrayOne = [1, 2, 3, 4];
-// let arrayTwo = [2, 3, 4, 5];
+// let createParagraph = (p) => document.write(`<p>${p}</p>`);
 //
-// function createArray(arrayOne, arrayTwo) {
-//     let arrayNew = [];
+// createParagraph(paragraph);
+
+// // - створити функцію яка створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий
 //
-//     for (let i = 0; i < arrayOne.length; i++) {
-//         for (let j = 0; j < arrayTwo.length; j++) {
-//             if (i === j) {
-//                 arrayNew.push(arrayOne[i] + arrayTwo[i]);
-//             }
-//         }
+// let li = 'item';
+//
+// let createItem = (li) => {
+//     document.write('<ul>');
+//
+//     for (let i = 0; i < 3; i++) {
+//         document.write(`<li>${li}</li>`);
+//
 //     }
-//     console.log(arrayNew);
+//
+//     document.write('</ul>');
+//
 // }
 //
-// createArray(arrayOne, arrayTwo);
+// createItem(li);
 
-// // Створити функцію яка приймає масив будь яких объектів, та повертає масив ключів всіх обєктів
+// // - створити функцію яка створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий. Кількість li визначається другим аргументом, який є числовим (тут використовувати цикл)
 //
-// let data = [{
-//     name: 'Dimas',
-//     age: '13'
-// },
+// let count = +prompt('Введіть к-сть елементів списку');
+//
+// let createItem = (text, count) => {
+//     document.write('<ul>');
+//
+//     for (let i = 0; i < count; i++) {
+//         document.write(`<li>${text}</li>`);
+//
+//
+//     }
+//
+//     document.write('</ul>')
+// }
+//
+// createItem('item', count);
+
+// // - створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список
+//
+// let array = [1, 'Maks', true, 3, 6, 34243, 'Nazar', false];
+//
+// let createArrayItem = (array) => {
+//     document.write('<ul>');
+//
+//     for (let i = 0; i < array.length; i++) {
+//         const arrayElement = array[i];
+//         document.write(`<li>${arrayElement}</li>`);
+//
+//     }
+//
+//     document.write('</ul>');
+// }
+//
+// createArrayItem(array);
+
+// // - створити функцію яка приймає масив об'єктів з наступними полями id,name,age , та виводить їх в документ. Для кожного об'єкту окремий блок.
+//
+//
+// let users = [
 //     {
-//         model: 'Camry'
-//     }
-// ]
+//         id: 1,
+//         name: 'Nazar',
+//         age: 21
 //
-// function logObject(data) {
-//     for (const element of data) {
-//         console.log(Object.keys(element));
-//     }
-// }
-//
-// logObject(data);
-//
-
-// // Cтворити функцію яка приймає масив будь яких объектів, та повертає масив значень всіх обєктів
-// let data = [
-//     {
-//         name: 'Dimas',
-//         age: '13'
 //     },
 //     {
-//         model: 'Camry'
-//     }
+//         id: 2,
+//         name: 'Maks',
+//         age: 35
+//
+//     },
+//     {
+//         id: 3,
+//         name: 'Dimas',
+//         age: 10
+//
+//     },
+//     {
+//         id: 4,
+//         name: 'Karina',
+//         age: 15
+//
+//     },
 // ]
 //
-// function logObject(data) {
 //
-//     for (const element of data) {
+// let userCreator = (obj) => {
+//     document.write(`<div>`);
 //
-//         console.log(Object.values(element));
+//     for (const objElement of obj) {
+//         document.write('<div>');
+//         document.write(`<h1>${objElement.name} №${objElement.id}</h1>`)
+//         document.write(`<p>${objElement.age}</p>`);
+//         document.write('</div>');
 //     }
+//
+//     document.write(`</div>`);
+//
 // }
 //
-// logObject(data);
+// userCreator(users);
