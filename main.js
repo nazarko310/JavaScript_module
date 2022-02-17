@@ -3,7 +3,7 @@
 // let numberTwo = +prompt('Введіть друге число');
 // let numberThree = +prompt('Введіть третє число');
 //
-// function createMinNumber(numberOne, numberTwo, numberThree) {
+// let createMinNumber = (numberOne, numberTwo, numberThree) => {
 //     if (numberOne < numberTwo && numberOne < numberThree) {
 //         console.log(numberOne);
 //     } else if (numberTwo < numberOne && numberTwo < numberThree) {
@@ -21,7 +21,7 @@
 // let numberTwo = +prompt('Введіть друге число');
 // let numberThree = +prompt('Введіть третє число');
 //
-// function createMaxNumber(numberOne, numberTwo, numberThree) {
+// let createMaxNumber = (numberOne, numberTwo, numberThree) => {
 //     if (numberOne > numberTwo && numberOne > numberThree) {
 //         console.log(numberOne);
 //     } else if (numberTwo > numberOne && numberTwo > numberThree) {
@@ -38,32 +38,25 @@
 //
 // let array = [1, 324, 4534, 6757, 453];
 //
-// function arrayCreateMax(array) {
-//     console.log(Math.max.apply(null, array));
-// }
+// let arrayCreateMax = (array) => Math.max.apply(null, array)
 //
-// arrayCreateMax(array);
+// console.log(arrayCreateMax(array));
 
 // // - створити функцію яка повертає найменьше число з масиву
 //
 // let array = [1, 324, 4534, 6757, 453];
 //
-// function arrayCreateMin(array) {
-//     console.log(Math.min.apply(null, array));
-// }
+// let arrayCreateMin = (array) => (Math.min.apply(null, array))
 //
-// arrayCreateMin(array);
+// console.log(arrayCreateMin(array));
 
 // // - створити функцію яка приймає масив чисел, сумує значення елементів масиву та повертає його. Приклад [1,2,10]->13
-//
 // let array = [1, 324, 4534, 6757, 453];
 // let sum = 0;
 //
-// function arraySum(arr) {
+// let arraySum = (arr) => {
 //     for (let i = 0; i < arr.length; i++) {
-//
 //         sum += arr[i];
-//
 //     }
 //     return sum;
 // }
@@ -76,9 +69,8 @@
 // let sum = 0;
 // let average;
 //
-// function createArrayAverage(arr) {
+// let createArrayAverage = (arr) => {
 //     for (let i = 0; i < arr.length; i++) {
-//         const arrElement = arr[i];
 //         sum += arr[i];
 //         average = sum / arr.length;
 //     }
@@ -91,7 +83,7 @@
 //
 // let array = [489498, 5894, 4849, 4478, 2326, 484, 484, 468];
 //
-// function arrayMaxMin(array) {
+// let arrayMaxMin = (array) => {
 //     let min = array[0];
 //     let max = min;
 //     for (let i = 0; i < array.length; i++) {
@@ -112,7 +104,7 @@
 // // - створити функцію яка заповнює масив рандомними числами
 // let array = [];
 //
-// function createArray(arr) {
+// let createArray = (arr) => {
 //     for (let i = 0; i < 100; i++) {
 //         arr.push(Math.round(Math.random() * 100))
 //
@@ -128,7 +120,7 @@
 //
 // let array = [];
 //
-// function createArray(arr) {
+// let createArray = (arr) => {
 //     for (let i = 0; i < limit; i++) {
 //         arr.push(Math.round(Math.random() * 100))
 //
@@ -142,7 +134,7 @@
 //
 // let array = [1, 2, 3];
 //
-// function reverseArray(arr) {
+// let reverseArray = (arr) => {
 //     for (let i = arr.length - 1; i >= 0; i--) {
 //         const arrElement = arr[i];
 //         console.log(arrElement);
