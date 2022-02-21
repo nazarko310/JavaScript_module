@@ -1,111 +1,97 @@
-// // - Знайти та вивести довижину настипних стрінгових значень
+// // - Дано список імен.
+// //     let n1 = 'Harry..Potter'
+// // let n2 = 'Ron---Whisley'
+// // let n3 = 'Hermione__Granger'
+// // Написати функцію, яка приймає будь яке не валідне імя, та нормалізує його в наступнйи вигляд
 //
-// let stringOne = 'hello world'
-// let stringTwo = 'lorem ipsum'
-// let stringThree = 'javascript is cool'
+// let n1 = 'Harry..Potter'
 //
-// console.log(stringOne.length);
-// console.log(stringTwo.length);
-// console.log(stringThree.length);
-
-// // Перевести до великого регістру наступні стрінгові значення
-// // 'hello world', 'lorem ipsum', 'javascript is cool'
-//
-// let stringOne = 'hello world'
-// let stringTwo = 'lorem ipsum'
-// let stringThree = 'javascript is cool'
-//
-// console.log(stringTwo.toUpperCase());
-// console.log(stringOne.toUpperCase());
-// console.log(stringThree.toUpperCase());
-
-// // - Перевести до нижнього регістру настипні стрінгові значення
-// // 'HELLO WORLD', 'LOREM IPSUM', 'JAVASCRIPT IS COOL'
-//
-//
-// let stringOne = 'HELLO WORLD'
-// let stringTwo = 'LOREM IPSUM'
-// let stringThree = 'JAVASCRIPT IS COOL'
-//
-// console.log(stringOne.toLowerCase());
-// console.log(stringTwo.toLowerCase());
-// console.log(stringThree.toLowerCase());
-
-// // - Є "брудна" стрінга let str = ' dirty string   ' . Почистити її від зайвих пробілів.
-//
-// let str = ' dirty string   ';
-//
-// console.log(str.trim());
-
-// // - Напишіть функцію stringToarray(str), яка перетворює рядок на масив слів.
-// //     let str = 'Каждый охотник желает знать';
-// // let arr = stringToarray(str);
-// // document.writeln(arr); // ['Каждый', 'охотник', 'желает', 'знать']
-//
-// let str = 'Каждый охотник желает знать';
-//
-// let stringToArray = (str) => {
-//     document.writeln(str.split(' '));
-// }
-//
-// stringToArray(str);
-
-// // - Напишіть функцію delete_characters(str, length), яка повертає підрядок, що складається із зазначеної кількості символів.
-// //     let str = 'Каждый охотник желает знать';
-// // document.writeln(delete_characters(str, 7)); // Каждый
-//
-// let length = +prompt('Введіть ширину');
-//
-// let str = 'Каждый охотник желает знать';
-//
-// let delete_characters = (str, length) => {
-//     let arr = str.split(' ');
-//     for (let i = 0; i < arr.length; i++) {
-//         const arrElement = arr[i];
-//         if (arrElement.length === length) {
-//             document.writeln(arrElement);
-//         }else {
-//            console.log('oops')
+// let funcGenerateName = (n1) => {
+//     let newArray = [];
+//     let arr1 = n1.trim().split('.');
+//     for (let i = 0; i < arr1.length; i++) {
+//         const arr1Element = arr1[i];
+//         if (arr1Element !== "") {
+//             newArray.push(arr1Element);
 //         }
+//     }
+//     return newArray.join(' ')
 //
+// }
+//
+// console.log(funcGenerateName(n1));
+
+// // - створити функцію, яка генерує масив рандомних числових цілих значень в діапазоні від 0 до 100.
+//
+// let funcSGenerate = () => {
+//     let array = [];
+//     for (let i = 0; i < 10; i++) {
+//         array.push(Math.floor(Math.random() * 100));
+//     }
+//     return array;
+//
+// }
+// const newArray = funcSGenerate();
+
+// // створити (або згенерувати, за допомоги попередньої функції) масив рандомних цілих числових значень. Відсортувати його за допомоги sort
+//
+// newArray.sort((a, b) => a - b)
+// console.log(newArray)
+
+// // - створити (або згенерувати, за допомоги попередньої функції) масив рандомних цілих числових значень. відфільтрувати  його за допомоги filter, залишивши тільки парні числа
+//
+// console.log(newArray.filter(number => number % 2 === 0));
+
+// // - створити масив рандомних цілих числових значень (або згенерувати, за допомоги попередньої функції) . за допомоги map та колбеку перетворити всі об'єкти в масиві на стрінгові.
+// newArray.map(number => console.log(number.toString()));
+
+// // - створити функцію sortNums(direction), яка прймає масив чисел, та сортує його від більшого до меньшого, або навпаки в залежності від значення аргументу direction.
+// //     let nums = [11,21,3];
+// // sortNums('ascending') // [3,11,21]
+// // sortNums('descending') // [21,11,3]
+//
+// let nums = [11, 21, 3];
+//
+// let direction = prompt('Write direction');
+//
+// let funcSort = (nums, direction) => {
+//     if (direction === 'ascending') {
+//        return  nums.sort((a, b) => a - b);
+//     } else if (direction === 'descending') {
+//        return  nums.sort((a, b) => b - a);
+//
+//     }else {
+//         return 'direction is not used'
 //     }
 // }
 //
-// delete_characters(str, length);
+// console.log(funcSort(nums, direction));
 
-// // - Напишіть функцію insert_dash(str), яка приймає рядок str як аргумент і вставляє тире (-) між словами. При цьому всі символи рядка необхідно перевести у верхній регістр.
-// //     let str = "HTML JavaScript PHP";
-// // document.writeln(insert_dash(str)); // 'HTML-JAVASCRIPT-PHP'
-// let str = "HTML JavaScript PHP";
-// let insert_dash = (str) => {
-//     document.writeln(str.split(' ').join('-').toUpperCase());
-// }
-// insert_dash(str);
-
- // - Напишіть функцію, яка приймає рядок як аргумент і перетворює регістр першого символу рядка з нижнього регістру у верхній.
-
- let str = 'lorem ipsum dolor sit amet, consectetur adipisicing elit';
-
- let funcToUpperCase = (str) => {
-     console.log(str.charAt(0).toUpperCase());
-
- }
-
- funcToUpperCase(str);
-
-// // Напишіть функцію capitalize(str), яка повертає рядок, у якому кожне слово починається з великої літери.
+// // - є масив
+// // let coursesAndDurationArray = [
+// //     {title: 'JavaScript Complex', monthDuration: 5},
+// //     {title: 'Java Complex', monthDuration: 6},
+// //     {title: 'Python Complex', monthDuration: 6},
+// //     {title: 'QA Complex', monthDuration: 4},
+// //     {title: 'FullStack', monthDuration: 7},
+// //     {title: 'Frontend', monthDuration: 4}
+// // ];
+// // -- відсортувати його за спаданням за monthDuration
+// // -- відфільтрувати , залишивши тільки курси з тривалістю більше 5 місяців
 //
-// let str = 'lorem ipsum dolor sit amet, consectetur adipisicing elit';
+// let coursesAndDurationArray = [
+//     {title: 'JavaScript Complex', monthDuration: 5},
+//     {title: 'Java Complex', monthDuration: 6},
+//     {title: 'Python Complex', monthDuration: 6},
+//     {title: 'QA Complex', monthDuration: 4},
+//     {title: 'FullStack', monthDuration: 7},
+//     {title: 'Frontend', monthDuration: 4}
+// ];
 //
-// let capitalize = (str) => {
-//     let arr = str.split(' ');
-//     for (let i = 0; i < arr.length; i++) {
-//         // console.log(arr[i]);
-//         let firstLetter = arr[i].charAt(0).toUpperCase();
-//         let newStr = arr[i].replace(arr[i].charAt(0), firstLetter);
-//         console.log(newStr.join(''))
+// let newSortObj = coursesAndDurationArray.sort((a, b) => b.monthDuration - a.monthDuration);
 //
-//     }
-// }
+// console.log(newSortObj);
 //
-// capitalize(str)
+// let filterNewObj = coursesAndDurationArray.filter(value => value.monthDuration > 5);
+//
+// console.log(filterNewObj);
