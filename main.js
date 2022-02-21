@@ -1,76 +1,111 @@
-// // - Дано натуральное число n. Выведите все числа от 1 до n.
-// let number = +prompt('Введіть число');
+// // - Знайти та вивести довижину настипних стрінгових значень
 //
-// let func = (number) => {
-//     for (let i = 1; i <= number; i++) {
-//         console.log(i);
+// let stringOne = 'hello world'
+// let stringTwo = 'lorem ipsum'
+// let stringThree = 'javascript is cool'
 //
-//     }
-// }
-//
-// func(number);
+// console.log(stringOne.length);
+// console.log(stringTwo.length);
+// console.log(stringThree.length);
 
-// // - Даны два целых числа A и В . Выведите все числа от A до B включительно, в порядке возрастания, если A < B, или в порядке убывания в противном случае.
+// // Перевести до великого регістру наступні стрінгові значення
+// // 'hello world', 'lorem ipsum', 'javascript is cool'
 //
+// let stringOne = 'hello world'
+// let stringTwo = 'lorem ipsum'
+// let stringThree = 'javascript is cool'
 //
-// let a = +prompt('A');
-// let b = +prompt('B');
-//
-// let func = (a, b) => {
-//     if (a < b) {
-//         for (let i = a; i <= b; i++) {
-//             console.log(i);
-//         }
-//     } else {
-//         for (let i = a; i>= b; i--) {
-//             console.log(i);
-//
-//         }
-//     }
-// }
-//
-// func(a, b);
+// console.log(stringTwo.toUpperCase());
+// console.log(stringOne.toUpperCase());
+// console.log(stringThree.toUpperCase());
 
-// // - Функція приймає масив та число "i", та міняє місцями об`єкт який знаходиться в індексі "i" на "i+1"
-// let array = [0, 10, 2, 56];
+// // - Перевести до нижнього регістру настипні стрінгові значення
+// // 'HELLO WORLD', 'LOREM IPSUM', 'JAVASCRIPT IS COOL'
 //
-// function permutationsFunction(array, i) {
-//     let number = 0
-//     let firstNumber = 0;
 //
-//     if (i === (array.length - 1)) {
-//         firstNumber = array[0];
-//         array[0] = array[i];
-//         array[i] = firstNumber;
-//     } else {
-//         number = array[i];
-//         array[i] = array[i + 1];
-//         array[i + 1] = number;
-//     }
-//     console.log(array)
-// }
+// let stringOne = 'HELLO WORLD'
+// let stringTwo = 'LOREM IPSUM'
+// let stringThree = 'JAVASCRIPT IS COOL'
 //
-// permutationsFunction(array, 0);
+// console.log(stringOne.toLowerCase());
+// console.log(stringTwo.toLowerCase());
+// console.log(stringThree.toLowerCase());
 
-// // - Сворити функцію яка буде переносити елементи з значенням 0 у кінець маисву. Зберігаючи при цьому порядок не нульових значень.
-// let array = [0, 10, 0, 11];
+// // - Є "брудна" стрінга let str = ' dirty string   ' . Почистити її від зайвих пробілів.
 //
-// function zeroFunction(array) {
-//     let arrayZero = [];
-//     let arrayNew = [];
-//     for (let i = 0; i < array.length; i++) {
-//         if (array[i] === 0) {
-//             arrayZero.push(array[i]);
-//         }
-//         if (array[i] !== 0) {
-//             arrayNew.push(array[i]);
-//         }
-//     }
-//     arrayNew = arrayNew.concat(arrayZero);
-//     for (let j = 0; j < arrayNew.length; j++) {
-//         console.log(arrayNew[j]);
-//     }
+// let str = ' dirty string   ';
 //
+// console.log(str.trim());
+
+// // - Напишіть функцію stringToarray(str), яка перетворює рядок на масив слів.
+// //     let str = 'Каждый охотник желает знать';
+// // let arr = stringToarray(str);
+// // document.writeln(arr); // ['Каждый', 'охотник', 'желает', 'знать']
+//
+// let str = 'Каждый охотник желает знать';
+//
+// let stringToArray = (str) => {
+//     document.writeln(str.split(' '));
 // }
 //
-// zeroFunction(array);
+// stringToArray(str);
+
+// // - Напишіть функцію delete_characters(str, length), яка повертає підрядок, що складається із зазначеної кількості символів.
+// //     let str = 'Каждый охотник желает знать';
+// // document.writeln(delete_characters(str, 7)); // Каждый
+//
+// let length = +prompt('Введіть ширину');
+//
+// let str = 'Каждый охотник желает знать';
+//
+// let delete_characters = (str, length) => {
+//     let arr = str.split(' ');
+//     for (let i = 0; i < arr.length; i++) {
+//         const arrElement = arr[i];
+//         if (arrElement.length === length) {
+//             document.writeln(arrElement);
+//         }else {
+//            console.log('oops')
+//         }
+//
+//     }
+// }
+//
+// delete_characters(str, length);
+
+// // - Напишіть функцію insert_dash(str), яка приймає рядок str як аргумент і вставляє тире (-) між словами. При цьому всі символи рядка необхідно перевести у верхній регістр.
+// //     let str = "HTML JavaScript PHP";
+// // document.writeln(insert_dash(str)); // 'HTML-JAVASCRIPT-PHP'
+// let str = "HTML JavaScript PHP";
+// let insert_dash = (str) => {
+//     document.writeln(str.split(' ').join('-').toUpperCase());
+// }
+// insert_dash(str);
+
+ // - Напишіть функцію, яка приймає рядок як аргумент і перетворює регістр першого символу рядка з нижнього регістру у верхній.
+
+ let str = 'lorem ipsum dolor sit amet, consectetur adipisicing elit';
+
+ let funcToUpperCase = (str) => {
+     console.log(str.charAt(0).toUpperCase());
+
+ }
+
+ funcToUpperCase(str);
+
+// // Напишіть функцію capitalize(str), яка повертає рядок, у якому кожне слово починається з великої літери.
+//
+// let str = 'lorem ipsum dolor sit amet, consectetur adipisicing elit';
+//
+// let capitalize = (str) => {
+//     let arr = str.split(' ');
+//     for (let i = 0; i < arr.length; i++) {
+//         // console.log(arr[i]);
+//         let firstLetter = arr[i].charAt(0).toUpperCase();
+//         let newStr = arr[i].replace(arr[i].charAt(0), firstLetter);
+//         console.log(newStr.join(''))
+//
+//     }
+// }
+//
+// capitalize(str)
