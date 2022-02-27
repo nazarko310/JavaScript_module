@@ -1,150 +1,157 @@
-// // Створити функцію конструктор яка дозволяє створювати об'єкти car, з властивостями модель, виробник, рік випуску, максимальна швидкість, об'єм двигуна. додати в об'єкт функції:
-// // -- drive () - яка виводить в консоль `їдемо зі швидкістю ${максимальна швидкість} на годину`
-// // -- info () - яка виводить всю інформацію про автомобіль в форматі `назва поля - значення поля`
-// // -- increaseMaxSpeed (newSpeed) - яка підвищує значення максимальної швидкості на значення newSpeed
-// // -- changeYear (newValue) - змінює рік випуску на значення newValue
-// // -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і додає його в поточний об'єкт car
-// function Driver(name, point, experience) {
-//     this.name = name;
-//     this.point = point;
-//     this.experience = experience;
+// // - Створити клас або функцію конструктор, за допомоги якої можна створювати об'єкти наступного вигляду.
+// // Конструктор повинен приймати значення для кожної властивості, в т.ч і для властивостей внутрішніх об'єктів
+// //
+// // {
+// //     id: 1,
+// //         name: 'Leanne Graham',
+// //     username: 'Bret',
+// //     email: 'Sincere@april.biz',
+// //     address: {
+// //     street: 'Kulas Light',
+// //         suite: 'Apt. 556',
+// //         city: 'Gwenborough',
+// //         zipcode: '92998-3874',
+// //         geo: {
+// //         lat: '-37.3159',
+// //             lng: '81.1496'
+// //     }
+// // },
+// //     phone: '1-770-736-8031 x56442',
+// //         website: 'hildegard.org',
+// //     company: {
+// //     name: 'Romaguera-Crona',
+// //         catchPhrase: 'Multi-layered client-server neural-net',
+// //         bs: 'harness real-time e-markets'
+// // }
+// // }
+//
+// class Address {
+//     constructor(street, suite, city, zipcode, geo) {
+//         this.street = street;
+//         this.suite = suite;
+//         this.city = city;
+//         this.zipcode = zipcode;
+//         this.geo = geo;
+//     }
 // }
 //
-// function Car(model, producer, year, maxSpeed) {
-//     this.model = model;
-//     this.producer = producer;
-//     this.year = year;
-//     this.maxSpeed = maxSpeed;
-//     this.driver = [];
-//
-//     this.drive = () => {
-//         console.log(`їдемо зі швидкістю ${maxSpeed} км на годин`);
+// class Geo {
+//     constructor(lat, lng) {
+//         this.lat = lat;
+//         this.lng = lng;
 //     }
-//     this.info = () => {
-//         console.log(`Модель - ${model}, Виробник - ${producer}, Рік виробництва - ${year}`);
-//     }
-//     this.increaseMaxSpeed = (newSpeed) => {
-//         if (newSpeed < 0 || newSpeed < this.maxSpeed) {
-//             alert('!!!!!!!!');
-//         } else {
-//             this.maxSpeed = newSpeed;
-//         }
-//     }
-//     this.changeYear = (newValue) => {
-//         if (newValue < 1980) {
-//             console.log('It`s very old car');
-//         } else {
-//             this.year = newValue;
-//         }
-//     }
-//
-//     this.addDriver = (name, point, experience) => {
-//         this.driver.push(new Driver(name, point, experience))
-//     }
-//
 // }
-
-// // - (Те саме, тільки через клас)
-// // Створити клас який дозволяє створювати об'єкти car, з властивостями модель, виробник, рік випуску, максимальна швидкість, об'єм двигуна. додати в об'єкт функції:
-// // -- drive () - яка виводить в консоль `їдемо зі швидкістю ${максимальна швидкість} на годину`
-// // -- info () - яка виводить всю інформацію про автомобіль в форматі `назва поля - значення поля`
-// // -- increaseMaxSpeed (newSpeed) - яка підвищує значення максимальної швидкості на значення newSpeed
-// // -- changeYear (newValue) - змінює рік випуску на значення newValue
-// // -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і додає його в поточний об'єкт car
 //
-// class Driver {
-//
-//     constructor(name, point, experience) {
+// class Company {
+//     constructor(name, catchPhrase, bs) {
 //         this.name = name;
-//         this.point = point;
-//         this.experience = experience;
+//         this.catchPhrase = catchPhrase;
+//         this.bs = bs;
 //     }
 // }
 //
-// class Class {
-//     constructor(model, producer, year, maxSpeed) {
-//         this.model = model;
-//         this.producer = producer;
-//         this.year = year;
-//         this.maxSpeed = maxSpeed;
-//         this.driver = [];
-//     }
+// class User {
 //
-//     drive = () => {
-//         console.log(`їдемо зі швидкістю ${this.maxSpeed} на годину`)
-//     }
-//
-//     info = () => {
-//         console.log(`Модель - ${this.model}, Вирбник - ${this.producer}, Рік випуску - ${this.year}`)
-//     }
-//
-//     increaseMaxSpeed = (newSpeed) => {
-//         if (newSpeed < 0 || newSpeed < this.maxSpeed) {
-//             console.log('!!!!!!');
-//         } else {
-//             this.maxSpeed = newSpeed;
-//
-//         }
-//     }
-//
-//     changeYear = (newYear) => {
-//         if (newYear < 1990) {
-//             console.log('This car is very old');
-//         } else {
-//             this.year = newYear;
-//         }
-//     }
-//
-//     addDriver = (name, point, experience) => {
-//         this.driver.push(new Driver(name, point, experience))
-//     }
-// }
-
-// // -створити класс/функцію конструктор попелюшка з полями ім'я, вік, розмір ноги. Створити масив з 10 попелюшок.
-// // Сторити об'єкт класу "принц" за допомоги класу який має поля ім'я, вік, туфелька яку він знайшов.
-// //     За допомоги циклу знайти яка попелюшка повинна бути з принцом.
-//
-//
-//
-// class Cinderellas {
-//
-//     constructor(name, age, sizeOfFoot) {
+//     constructor(id, name, username, email, address, phone, website, company) {
+//         this.id = id;
 //         this.name = name;
-//         this.age = age;
-//         this.sizeOfFoot = sizeOfFoot;
+//         this.username = username;
+//         this.email = email;
+//         this.address = address;
+//         this.phone = phone;
+//         this.website = website;
+//         this.company = company;
 //     }
 // }
 //
-// class Prince {
-//
-//     constructor(name, age, footIfFind) {
-//         this.name = name;
-//         this.age = age;
-//         this.footIfFind = footIfFind;
-//     }
-// }
-//
-// let cinderellas = [
-//     new Cinderellas('cinderellas1', 10, 12),
-//     new Cinderellas('cinderellas2', 12, 14),
-//     new Cinderellas('cinderellas3', 14, 16),
-//     new Cinderellas('cinderellas4', 11, 13),
-//     new Cinderellas('cinderellas5', 14, 11),
-//     new Cinderellas('cinderellas6', 16, 9),
-//     new Cinderellas('cinderellas7', 11, 15),
-//     new Cinderellas('cinderellas8', 12, 14),
-//     new Cinderellas('cinderellas9', 13, 13),
-//     new Cinderellas('cinderellas10', 10, 10)
-// ];
-//
-// let prince = new Prince('prince', 10, 10);
-//
-// for (let i = 0; i < cinderellas.length; i++) {
-//     const cinderella = cinderellas[i];
-//     if (cinderella.sizeOfFoot === prince.footIfFind) {
-//         console.log(cinderella);
-//     }
-// }
+// let user = new User(1, 'Leanne Graham', 'Bret', 'Sincere@april.biz',
+//     new Address('Kulas Light', 'Apt. 556', 'Gwenborough', '92998-3874', new Geo('-37.3159', '81.1496')),
+//     '1-770-736-8031 x56442', 'hildegard.org', new Company('Romaguera-Crona', 'Multi-layered client-server neural-net', 'harness real-time e-markets'))
+// console.log(user)
 
-// //     Додатково, знайти необхідну попелюшку за допомоги функції масиву find та відповідного колбеку
-// console.log(cinderellas.find(value => value.sizeOfFoot === prince.footIfFind));;
+// // -  Створити функцію конструктор / клас  який описує об'єкт тегу
+// // Поля :
+// //     -назва тегу ()
+// // - опис його дій
+// // - масив з атрибутами (2-3 атрибути максимум)
+// // Кожен атрибут описати як окремий який буде містити
+// // -назву атрибуту
+// // -опис дії атрибуту
+// // інформацію брати з htmlbook.ru
+// //
+// // Таким чином описати теги
+// // -a
+// // -div
+// // -h1
+// // -span
+// // -input
+// // -form
+// // -option
+// // -select
+// // Приклад результуючого об'єкту
+// // {
+// //     titleOfTag: 'area',
+// //         action: `Каждый элемент <area> определяет активные области изображения, которые являются ссылками...`,
+// //     attrs: [
+// //     {titleOfAttr: 'accesskey', actionOfAttr: 'Переход к области с помощью комбинации клавиш'},
+// //     {/*some props and values*/},
+// //     {/*...*/},
+// //     {/*...*/},
+// // ]
+// //
+// // }
+//
+// class Tag {
+//
+//     constructor(name, action, attrs) {
+//         this.name = name;
+//         this.action = action;
+//         this.attrs = attrs;
+//     }
+//
+// }
+//
+// class Attribute {
+//
+//     constructor(titleOfAttr, actionOfAttr) {
+//         this.titleOfAttr = titleOfAttr;
+//         this.actionOfAttr = actionOfAttr;
+//     }
+//
+// }
+//
+//
+// let tags = [
+//     new Tag('a', 'Створює посилання або якорь',
+//         [new Attribute('href', 'Задає адресу документа, на який слід перейти'),
+//             new Attribute('rel', 'Відносини між посилаються і поточним документами'),
+//             new Attribute('type', 'Вказує MIME-тип документа, на який веде посилання')
+//         ]),
+//     new Tag('div', 'Блоковий елемент і призначений для виділення фрагмента документа з метою зміни виду вмісту',
+//         [
+//             new Attribute('align', 'Задає вирівнювання вмісту тега div'),
+//             new Attribute('title', 'Додає підказку до вмісту')
+//         ]),
+//     new Tag('h1', 'Найбільш важливий заголовок першого рівня', new Attribute('align', 'Визначає вирівнювання заголовка')),
+//     new Tag('span', 'Призначений для визначення малих елементів документа', new Attribute('-', 'Для цього тега доступні універсальні атрибути і події')),
+//     new Tag('input', 'Дозволяє створювати різні елементи інтерфейсу і забезпечити взаємодію з користувачем',
+//         [
+//             new Attribute('type', 'Повідомляє браузеру, до якого типу належить елемент форми'),
+//             new Attribute('name', 'Ім`я поля, призначене для того, щоб обробник форми міг його ідентифікувати'),
+//             new Attribute('value', 'Значення елемента'),
+//         ]),
+//     new Tag('form', 'Встановлює форму на веб-сторінці', [
+//         new Attribute('method', 'Метод протоколу HTTP'),
+//         new Attribute('action', 'Адреса програми або документа, який обробляє дані форми')
+//     ]),
+//     new Tag('option', 'Визначає окремі пункти списку, що створюється за допомогою контейнера',[
+//         new Attribute('label', 'Вказівка мітки пункту списку'),
+//         new Attribute('selected', 'Заздалегідь встановлює певний пункт списку виділеним')
+//     ]),
+//     new Tag('select', 'Дозволяє створити елемент інтерфейсу у вигляді списку',[
+//         new Attribute('size', 'Кількість відображуваних рядків списку'),
+//         new Attribute('name', 'Ім`я елемента для відправки на сервер або звернення через скрипти')
+//     ])
+//
+// ]
+// console.log(tags)
