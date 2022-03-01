@@ -1,58 +1,138 @@
-// // -- отримує текст з параграфа з id "content"
+// // a) додає клас з назвою групи, елементу з ід main_header
 //
-// let content = document.getElementById('content');
-// console.log(content.innerText);
+// let mainHeader = document.getElementById('main_header');
+//
+// mainHeader.classList.add('dec-2021');
 
-// // -- отримує текст з блоку з id "rules"
+// // b) робить шириниу елементу ul 400px
 //
-// let rules = document.getElementById('rules');
-// console.log(rules.innerText);
-
-// // -- замініть текст параграфа з id 'content' на будь-який інший
+// let ulTagName = document.getElementsByTagName('ul');
 //
-// let content = document.getElementById('content');
+// for (let i = 0; i < ulTagName.length; i++) {
+//     const ulTagNameElement = ulTagName[i];
 //
-// content.innerText = 'The Simpsons is an American animated sitcom created by Matt Groening for the Fox Broadcasting Company.[1][2][3] The series is a satirical depiction of American life, epitomized by the Simpson family, which consists of Homer, Marge, Bart, Lisa, and Maggie. The show is set in the fictional town of Springfield and parodies American culture and society, television, and the human condition.'
-
-// // -- замініть текст параграфа з id 'rules' на будь-який інший
-//
-// let rules = document.getElementById('rules');
-//
-// rules.innerText = 'When producer James L. Brooks was working on the television variety show The Tracey Ullman Show, he decided to include small animated sketches before and after the commercial breaks. Having seen one of cartoonist Matt Groening\'s Life in Hell comic strips, Brooks asked Groening to pitch an idea for a series of animated shorts. Groening initially intended to present an animated version of his Life in Hell series.[19] However, Groening later realized that animating Life in Hell would require the rescinding of publication rights for his life\'s work. He therefore chose another approach while waiting in the lobby of Brooks\'s office for the pitch meeting, hurriedly formulating his version of a dysfunctional family that became the Simpsons.[19][20] He named the characters after his own family members, substituting "Bart" for his own name, adopting an anagram of the word brat.[19]'
-
-// // -- змініть кожному елементу колір фону на червоний
-//
-// let elementsByTagName = document.querySelectorAll('body>*');
-//
-// elementsByTagName.forEach(value => value.style.backgroundColor = 'red')
-
-// // -- змініть кожному елементу колір тексту на синій
-//
-// let elementAll = document.querySelectorAll('body>*');
-//
-// elementAll.forEach(value => value.style.backgroundColor = 'blue');
-
-// // -- отримати весь список класів елемента з id=rules і вивести їх в console.log
-//
-// let rules = document.getElementById('rules');
-//
-// console.log(rules.classList)
-
-// // -- поміняти колір тексту у всіх елементів fc_rules на червоний
-//
-// let fcRules = document.getElementsByClassName('fc_rules');
-//
-// for (let i = 0; i < fcRules.length; i++) {
-//     const fcRule = fcRules[i];
-//
-//     fcRule.style.color = 'red';
+//     ulTagNameElement.style.width = '400px';
 //
 // }
 
+// // c) робить шириниу всіх елементів з класом linkList шириною 50%
+//
+// let linkListElements = document.getElementsByClassName('linkList');
+//
+// for (let i = 0; i < linkListElements.length; i++) {
+//     const linkListElement = linkListElements[i];
+//
+//     linkListElement.style.width = '50%';
+//
+// }
 
+// // d) отримує текст який зберігається в елементі з класом listElement2
+//
+// let listElementTwo = document.getElementsByClassName('listElement2');
+//
+// for (let i = 0; i < listElementTwo.length; i++) {
+//     console.log(listElementTwo[i].innerText);
+//
+// }
 
+// // e) отримує всі елементи li та змінює ім колір фону на сірий
+//
+//
+// let li = document.getElementsByTagName("li");
+//
+// for (let i = 0; i < li.length; i++) {
+//     const liElement = li[i];
+//     liElement.style.backgroundColor = 'gray';
+// }
 
+// // f) отримує всі елементи 'a' та додає їм клас anchor
+//
+// let a = document.getElementsByTagName('a');
+//
+// for (let i = 0; i < a.length; i++) {
+//     const aElement = a[i];
+//
+//     aElement.classList.add('anchor');
+// }
 
+// // g) отримує всі елементи 'a' та у випадку, якщо текстовий контен елементу дорівнює link3, змінює йому розмір тексту на 40 пікселів
+//
+// let a = document.getElementsByTagName('a');
+//
+// for (let i = 0; i < a.length; i++) {
+//     const aElement = a[i];
+//     if (aElement.innerText === 'link3') {
+//         aElement.style.fontSize = '40px';
+//     }
+// }
 
+// // h) отримує всі елементи 'a' та додає їм клас element_XXX. Де XXX - текстовий контент елементу a
+//
+//  let a = document.getElementsByTagName('a');
+//
+//  for (let i = 0; i < a.length; i++) {
+//      const aElement = a[i];
+//
+//      aElement.classList.add(`element__${aElement.innerText}`)
+//
+//  }
 
+// // i) отримує всі елементи 'sub-header' та змінює колір фону. Фон отримати з prompt()
+//
+// let bgColor = prompt('Введіть колір фону');
+//
+// let subHeader = document.getElementsByClassName('sub-header');
+//
+// for (let i = 0; i < subHeader.length; i++) {
+//     const subHeaderElement = subHeader[i];
+//
+//     subHeaderElement.style.backgroundColor = bgColor;
+// }
+
+// // j) отримує всі елементи 'sub-header' та змінює колір тексту у видаку якщо текст елемнту = content 2 segment . Колір отримати з prompt()
+//
+// let bgColor = prompt('Введіть колір фону');
+//
+// let subHeader = document.getElementsByClassName('sub-header');
+//
+// for (let i = 0; i < subHeader.length; i++) {
+//     const subHeaderElement = subHeader[i];
+//
+//     if (subHeaderElement.innerText === 'content 2 segment') {
+//         subHeaderElement.style.backgroundColor = bgColor;
+//     }
+//
+// }
+
+// // k) отримує елемент з класом content_1 та заміняє  в ньому тест на довільний. Текст отримати з prompt()
+//
+// let text = prompt('Введіть текст');
+//
+// let contentOne = document.getElementsByClassName('content_1');
+//
+// for (let i = 0; i < contentOne.length; i++) {
+//     const contentOneElement = contentOne[i];
+//
+//     contentOneElement.innerText = text;
+// }
+
+// // l) отримати елементи p та змінити їм padding на 20px
+//
+// let textP = document.getElementsByTagName('p');
+//
+// for (let i = 0; i < textP.length; i++) {
+//     const textPElement = textP[i];
+//
+//     textPElement.style.padding = '20px';
+// }
+
+// // m) отримати елементи з класом text2 та змінити їм текст на назву групи (mon-year. Пример sep-2021)
+//
+// let textTwo = document.getElementsByClassName('text2');
+//
+//  for (let i = 0; i < textTwo.length; i++) {
+//      const textTwoElement = textTwo[i];
+//
+//      textTwoElement.innerText = 'dec-2021';
+//  }
 
