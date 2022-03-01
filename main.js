@@ -1,157 +1,58 @@
-// // - Створити клас або функцію конструктор, за допомоги якої можна створювати об'єкти наступного вигляду.
-// // Конструктор повинен приймати значення для кожної властивості, в т.ч і для властивостей внутрішніх об'єктів
-// //
-// // {
-// //     id: 1,
-// //         name: 'Leanne Graham',
-// //     username: 'Bret',
-// //     email: 'Sincere@april.biz',
-// //     address: {
-// //     street: 'Kulas Light',
-// //         suite: 'Apt. 556',
-// //         city: 'Gwenborough',
-// //         zipcode: '92998-3874',
-// //         geo: {
-// //         lat: '-37.3159',
-// //             lng: '81.1496'
-// //     }
-// // },
-// //     phone: '1-770-736-8031 x56442',
-// //         website: 'hildegard.org',
-// //     company: {
-// //     name: 'Romaguera-Crona',
-// //         catchPhrase: 'Multi-layered client-server neural-net',
-// //         bs: 'harness real-time e-markets'
-// // }
-// // }
+// // -- отримує текст з параграфа з id "content"
 //
-// class Address {
-//     constructor(street, suite, city, zipcode, geo) {
-//         this.street = street;
-//         this.suite = suite;
-//         this.city = city;
-//         this.zipcode = zipcode;
-//         this.geo = geo;
-//     }
-// }
-//
-// class Geo {
-//     constructor(lat, lng) {
-//         this.lat = lat;
-//         this.lng = lng;
-//     }
-// }
-//
-// class Company {
-//     constructor(name, catchPhrase, bs) {
-//         this.name = name;
-//         this.catchPhrase = catchPhrase;
-//         this.bs = bs;
-//     }
-// }
-//
-// class User {
-//
-//     constructor(id, name, username, email, address, phone, website, company) {
-//         this.id = id;
-//         this.name = name;
-//         this.username = username;
-//         this.email = email;
-//         this.address = address;
-//         this.phone = phone;
-//         this.website = website;
-//         this.company = company;
-//     }
-// }
-//
-// let user = new User(1, 'Leanne Graham', 'Bret', 'Sincere@april.biz',
-//     new Address('Kulas Light', 'Apt. 556', 'Gwenborough', '92998-3874', new Geo('-37.3159', '81.1496')),
-//     '1-770-736-8031 x56442', 'hildegard.org', new Company('Romaguera-Crona', 'Multi-layered client-server neural-net', 'harness real-time e-markets'))
-// console.log(user)
+// let content = document.getElementById('content');
+// console.log(content.innerText);
 
-// // -  Створити функцію конструктор / клас  який описує об'єкт тегу
-// // Поля :
-// //     -назва тегу ()
-// // - опис його дій
-// // - масив з атрибутами (2-3 атрибути максимум)
-// // Кожен атрибут описати як окремий який буде містити
-// // -назву атрибуту
-// // -опис дії атрибуту
-// // інформацію брати з htmlbook.ru
-// //
-// // Таким чином описати теги
-// // -a
-// // -div
-// // -h1
-// // -span
-// // -input
-// // -form
-// // -option
-// // -select
-// // Приклад результуючого об'єкту
-// // {
-// //     titleOfTag: 'area',
-// //         action: `Каждый элемент <area> определяет активные области изображения, которые являются ссылками...`,
-// //     attrs: [
-// //     {titleOfAttr: 'accesskey', actionOfAttr: 'Переход к области с помощью комбинации клавиш'},
-// //     {/*some props and values*/},
-// //     {/*...*/},
-// //     {/*...*/},
-// // ]
-// //
-// // }
+// // -- отримує текст з блоку з id "rules"
 //
-// class Tag {
+// let rules = document.getElementById('rules');
+// console.log(rules.innerText);
+
+// // -- замініть текст параграфа з id 'content' на будь-який інший
 //
-//     constructor(name, action, attrs) {
-//         this.name = name;
-//         this.action = action;
-//         this.attrs = attrs;
-//     }
+// let content = document.getElementById('content');
 //
-// }
+// content.innerText = 'The Simpsons is an American animated sitcom created by Matt Groening for the Fox Broadcasting Company.[1][2][3] The series is a satirical depiction of American life, epitomized by the Simpson family, which consists of Homer, Marge, Bart, Lisa, and Maggie. The show is set in the fictional town of Springfield and parodies American culture and society, television, and the human condition.'
+
+// // -- замініть текст параграфа з id 'rules' на будь-який інший
 //
-// class Attribute {
+// let rules = document.getElementById('rules');
 //
-//     constructor(titleOfAttr, actionOfAttr) {
-//         this.titleOfAttr = titleOfAttr;
-//         this.actionOfAttr = actionOfAttr;
-//     }
+// rules.innerText = 'When producer James L. Brooks was working on the television variety show The Tracey Ullman Show, he decided to include small animated sketches before and after the commercial breaks. Having seen one of cartoonist Matt Groening\'s Life in Hell comic strips, Brooks asked Groening to pitch an idea for a series of animated shorts. Groening initially intended to present an animated version of his Life in Hell series.[19] However, Groening later realized that animating Life in Hell would require the rescinding of publication rights for his life\'s work. He therefore chose another approach while waiting in the lobby of Brooks\'s office for the pitch meeting, hurriedly formulating his version of a dysfunctional family that became the Simpsons.[19][20] He named the characters after his own family members, substituting "Bart" for his own name, adopting an anagram of the word brat.[19]'
+
+// // -- змініть кожному елементу колір фону на червоний
+//
+// let elementsByTagName = document.querySelectorAll('body>*');
+//
+// elementsByTagName.forEach(value => value.style.backgroundColor = 'red')
+
+// // -- змініть кожному елементу колір тексту на синій
+//
+// let elementAll = document.querySelectorAll('body>*');
+//
+// elementAll.forEach(value => value.style.backgroundColor = 'blue');
+
+// // -- отримати весь список класів елемента з id=rules і вивести їх в console.log
+//
+// let rules = document.getElementById('rules');
+//
+// console.log(rules.classList)
+
+// // -- поміняти колір тексту у всіх елементів fc_rules на червоний
+//
+// let fcRules = document.getElementsByClassName('fc_rules');
+//
+// for (let i = 0; i < fcRules.length; i++) {
+//     const fcRule = fcRules[i];
+//
+//     fcRule.style.color = 'red';
 //
 // }
-//
-//
-// let tags = [
-//     new Tag('a', 'Створює посилання або якорь',
-//         [new Attribute('href', 'Задає адресу документа, на який слід перейти'),
-//             new Attribute('rel', 'Відносини між посилаються і поточним документами'),
-//             new Attribute('type', 'Вказує MIME-тип документа, на який веде посилання')
-//         ]),
-//     new Tag('div', 'Блоковий елемент і призначений для виділення фрагмента документа з метою зміни виду вмісту',
-//         [
-//             new Attribute('align', 'Задає вирівнювання вмісту тега div'),
-//             new Attribute('title', 'Додає підказку до вмісту')
-//         ]),
-//     new Tag('h1', 'Найбільш важливий заголовок першого рівня', new Attribute('align', 'Визначає вирівнювання заголовка')),
-//     new Tag('span', 'Призначений для визначення малих елементів документа', new Attribute('-', 'Для цього тега доступні універсальні атрибути і події')),
-//     new Tag('input', 'Дозволяє створювати різні елементи інтерфейсу і забезпечити взаємодію з користувачем',
-//         [
-//             new Attribute('type', 'Повідомляє браузеру, до якого типу належить елемент форми'),
-//             new Attribute('name', 'Ім`я поля, призначене для того, щоб обробник форми міг його ідентифікувати'),
-//             new Attribute('value', 'Значення елемента'),
-//         ]),
-//     new Tag('form', 'Встановлює форму на веб-сторінці', [
-//         new Attribute('method', 'Метод протоколу HTTP'),
-//         new Attribute('action', 'Адреса програми або документа, який обробляє дані форми')
-//     ]),
-//     new Tag('option', 'Визначає окремі пункти списку, що створюється за допомогою контейнера',[
-//         new Attribute('label', 'Вказівка мітки пункту списку'),
-//         new Attribute('selected', 'Заздалегідь встановлює певний пункт списку виділеним')
-//     ]),
-//     new Tag('select', 'Дозволяє створити елемент інтерфейсу у вигляді списку',[
-//         new Attribute('size', 'Кількість відображуваних рядків списку'),
-//         new Attribute('name', 'Ім`я елемента для відправки на сервер або звернення через скрипти')
-//     ])
-//
-// ]
-// console.log(tags)
+
+
+
+
+
+
+
+
